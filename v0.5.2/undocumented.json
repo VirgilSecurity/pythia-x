@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-pythia-x/Source/Client/PythiaClient.swift",
+      "line": 43,
+      "symbol": "PythiaClientError.constructingUrl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-pythia-x/Source/Crypto/PythiaCrypto.swift",
+      "line": 44,
+      "symbol": "PythiaCryptoError.passwordIsNotUTF8",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-pythia-x/Source/Crypto/PythiaCrypto.swift",
+      "line": 60,
+      "symbol": "PythiaCrypto.initQueue",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-pythia-x/Source/Crypto/PythiaCrypto.swift",
+      "line": 62,
+      "symbol": "PythiaCrypto.instanceCount",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-pythia-x/Source/Crypto/PythiaCrypto.swift",
+      "line": 64,
+      "symbol": "PythiaCrypto.init(crypto:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/VirgilSecurity/virgil-pythia-x"
+}

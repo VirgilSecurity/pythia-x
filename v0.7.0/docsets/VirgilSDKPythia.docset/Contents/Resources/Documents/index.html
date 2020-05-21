@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VirgilSDKPythia  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="VirgilSDKPythia  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">VirgilSDKPythia Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">VirgilSDKPythia Reference</a>
+        <img id="carat" src="img/carat.png" />
+        VirgilSDKPythia  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BlindResult.html">BlindResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BrainKey.html">BrainKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BrainKeyContext.html">BrainKeyContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PythiaClient.html">PythiaClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PythiaCrypto.html">PythiaCrypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PythiaServiceError.html">PythiaServiceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PythiaClientError.html">PythiaClientError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PythiaCryptoError.html">PythiaCryptoError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/PythiaClientProtocol.html">PythiaClientProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PythiaCryptoProtocol.html">PythiaCryptoProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='virgil-pythia-objective-c-swift-sdk' class='heading'>Virgil Pythia Objective-C/Swift SDK</h1>
+
+<p><a href="https://travis-ci.com/VirgilSecurity/virgil-pythia-x"><img src="https://api.travis-ci.com/VirgilSecurity/virgil-pythia-x.svg?branch=master" alt="Build Status"></a>
+<a href="https://cocoapods.org/pods/VirgilSDKPythia"><img src="https://img.shields.io/cocoapods/v/VirgilSDKPythia.svg" alt="CocoaPods Compatible"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<img src="https://img.shields.io/cocoapods/p/VirgilSDKPythia.svg?style=flat" alt="Platform">
+<a href="https://github.com/VirgilSecurity/virgil/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-BSD%203--Clause-blue.svg" alt="GitHub license"></a></p>
+
+<p><a href="#introduction">Introduction</a> | <a href="#sdk-features">SDK Features</a> | <a href="#installation">Installation</a> | <a href="#usage-examples">Usage Examples</a> | <a href="#docs">Docs</a> | <a href="#support">Support</a></p>
+<h2 id='introduction' class='heading'>Introduction</h2>
+
+<p><a href="https://developer.virgilsecurity.com/docs"><img width="230px" src="https://cdn.virgilsecurity.com/assets/images/github/logos/virgil-logo-red.png" align="left" hspace="10" vspace="6"></a><a href="https://virgilsecurity.com">Virgil Security</a> provides an SDK which allows you to communicate with Virgil Pythia Service and implement Pythia protocol in order to generate user&rsquo;s BrainKey. 
+<strong>BrainKey</strong> is a user&rsquo;s Private Key which is based on user&rsquo;s password. BrainKey can be easily restored and is resistant to online and offline attacks.</p>
+<h2 id='sdk-features' class='heading'>SDK Features</h2>
+
+<ul>
+<li>communicate with Virgil Pythia Service</li>
+<li>generate user&rsquo;s BrainKey</li>
+<li>use <a href="https://github.com/VirgilSecurity/virgil-crypto-c">Virgil Crypto library</a></li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>Virgil Pythia SDK is provided as a set of frameworks. These frameworks are distributed via Carthage and CocoaPods. Also in this guide, you find one more package called VirgilCrypto (Virgil Crypto Library) that is used by the SDK to perform cryptographic operations.</p>
+
+<p>Frameworks are available for:</p>
+
+<ul>
+<li>iOS 9.0+</li>
+<li>macOS 10.11+</li>
+<li>tvOS 9.0+</li>
+<li>watchOS 2.0+</li>
+</ul>
+<h3 id='cocoapods' class='heading'>COCOAPODS</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
+</code></pre>
+
+<p>To integrate Virgil Pythia into your Xcode project using CocoaPods, specify it in your <em>Podfile</em>:</p>
+<pre class="highlight shell"><code>target <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do
+  </span>use_frameworks!
+
+  pod <span class="s1">'VirgilSDKPythia'</span>, <span class="s1">'~&gt; 0.7.0'</span>
+end
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>brew update
+<span class="gp">$ </span>brew install carthage
+</code></pre>
+
+<p>To integrate Virgil Pythia into your Xcode project using Carthage, create an empty file with name <em>Cartfile</em> in your project&rsquo;s root folder and add following lines to your <em>Cartfile</em></p>
+<pre class="highlight plaintext"><code>github "VirgilSecurity/virgil-pythia-x" ~&gt; 0.7.0
+</code></pre>
+<h4 id='linking-against-prebuilt-binaries' class='heading'>Linking against prebuilt binaries</h4>
+
+<p>To link prebuilt frameworks to your app, run following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>carthage update
+</code></pre>
+
+<p>This will build each dependency or download a pre-compiled framework from github Releases.</p>
+<h5 id='building-for-ios-tvos-watchos' class='heading'>Building for iOS/tvOS/watchOS</h5>
+
+<p>On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, add following frameworks from the <em>Carthage/Build</em> folder inside your project&rsquo;s folder:</p>
+
+<ul>
+<li>VirgilSDKPythia</li>
+<li>VirgilSDK</li>
+<li>VirgilCryptoAPI</li>
+<li>VirgilCrypto</li>
+<li>VirgilCryptoFoundation</li>
+<li>VirgilCryptoPythia</li>
+<li>VSCCommon</li>
+<li>VSCFoundation</li>
+<li>VSCPythia</li>
+</ul>
+
+<p>On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase.” Create a Run Script in which you specify your shell (ex: <em>/bin/sh</em>), add the following contents to the script area below the shell:</p>
+<pre class="highlight shell"><code>/usr/local/bin/carthage copy-frameworks
+</code></pre>
+
+<p>and add the paths to the frameworks you want to use under “Input Files”, e.g.:</p>
+<pre class="highlight plaintext"><code>$(SRCROOT)/Carthage/Build/iOS/VirgilSDKPythia.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilSDK.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoAPI.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCrypto.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoFoundation.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoPythia.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCCommon.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCFoundation.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCPythia.framework
+</code></pre>
+<h5 id='building-for-macos' class='heading'>Building for macOS</h5>
+
+<p>On your application target&rsquo;s “General” settings tab, in the “Embedded Binaries” section, drag and drop following frameworks from the Carthage/Build folder on disk:</p>
+
+<ul>
+<li>VirgilSDKPythia</li>
+<li>VirgilSDK</li>
+<li>VirgilCryptoAPI</li>
+<li>VirgilCrypto</li>
+<li>VirgilCryptoFoundation</li>
+<li>VirgilCryptoPythia</li>
+<li>VSCCommon</li>
+<li>VSCFoundation</li>
+<li>VSCPythia</li>
+</ul>
+
+<p>Additionally, you&rsquo;ll need to copy debug symbols for debugging and crash reporting on macOS.</p>
+
+<p>On your application target’s “Build Phases” settings tab, click the “+” icon and choose “New Copy Files Phase”.
+Click the “Destination” drop-down menu and select “Products Directory”. For each framework, drag and drop corresponding dSYM file.</p>
+<h2 id='usage-examples' class='heading'>Usage Examples</h2>
+<h3 id='brainkey' class='heading'>BrainKey</h3>
+
+<p><em>PYTHIA</em> Service can be used directly as a means to generate strong cryptographic keys based on user&rsquo;s <strong>password</strong> or other secret data. We call these keys the <strong>BrainKeys</strong>. Thus, when you need to restore a Private Key you use only user&rsquo;s Password and Pythia Service.</p>
+
+<p>In order to create a user&rsquo;s BrainKey, go through the following operations:</p>
+
+<ul>
+<li>Register your E2EE application on <a href="https://dashboard.virgilsecurity.com/">Virgil Dashboard</a> and get your app credentials</li>
+<li>Generate your API key or use available</li>
+<li>Set up <strong>JWT provider</strong> using previously mentioned parameters (<strong>App ID, API key, API key ID</strong>) on the Server side</li>
+<li>Generate JWT token with <strong>user&rsquo;s identity</strong> inside and transmit it to Client side (user&rsquo;s side)</li>
+<li>On Client side set up <strong>access token provider</strong> in order to specify JWT provider</li>
+<li>Setup BrainKey function with access token provider and pass user&rsquo;s password</li>
+<li>Send BrainKey request to Pythia Service</li>
+<li>Generate a strong cryptographic keypair based on a user&rsquo;s password or other user&rsquo;s secret</li>
+</ul>
+<h4 id='generate-brainkey-based-on-user-39-s-password' class='heading'>Generate BrainKey based on user&rsquo;s password</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">VirgilSDK</span>
+<span class="kd">import</span> <span class="kt">VirgilSDKPythia</span>
+
+<span class="c1">/// 1. Specify your JWT provider</span>
+
+<span class="c1">// Get generated token from server-side</span>
+<span class="k">let</span> <span class="nv">authenticatedQueryToServerSide</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="o">=</span> <span class="p">{</span> <span class="n">completion</span> <span class="k">in</span>
+    <span class="nf">completion</span><span class="p">(</span><span class="s">"eyJraWQiOiI3MGI0NDdlMzIxZjNhMGZkIiwidHlwIjoiSldUIiwiYWxnIjoiVkVEUzUxMiIsImN0eSI6InZpcmdpbC1qd3Q7dj0xIn0.eyJleHAiOjE1MTg2OTg5MTcsImlzcyI6InZpcmdpbC1iZTAwZTEwZTRlMWY0YmY1OGY5YjRkYzg1ZDc5Yzc3YSIsInN1YiI6ImlkZW50aXR5LUFsaWNlIiwiaWF0IjoxNTE4NjEyNTE3fQ.MFEwDQYJYIZIAWUDBAIDBQAEQP4Yo3yjmt8WWJ5mqs3Yrqc_VzG6nBtrW2KIjP-kxiIJL_7Wv0pqty7PDbDoGhkX8CJa6UOdyn3rBWRvMK7p7Ak"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Setup AccessTokenProvider</span>
+<span class="k">let</span> <span class="nv">accessTokenProvider</span> <span class="o">=</span> <span class="kt">CallbackJwtProvider</span> <span class="p">{</span> <span class="n">tokenContext</span><span class="p">,</span> <span class="n">completion</span> <span class="k">in</span>
+    <span class="n">authenticatedQueryToServerSide</span> <span class="p">{</span> <span class="n">jwtString</span> <span class="k">in</span>
+        <span class="nf">completion</span><span class="p">(</span><span class="n">jwtString</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">/// 2. Setup BrainKey</span>
+
+<span class="k">let</span> <span class="nv">brainKeyContext</span> <span class="o">=</span> <span class="kt">BrainKeyContext</span><span class="o">.</span><span class="nf">makeContext</span><span class="p">(</span><span class="nv">accessTokenProvider</span><span class="p">:</span> <span class="n">accessTokenProvider</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">brainKey</span> <span class="o">=</span> <span class="kt">BrainKey</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="n">brainKeyContext</span><span class="p">)</span>
+
+<span class="c1">// Generate default public/private keypair which is Curve ED25519</span>
+<span class="c1">// If you need to generate several BrainKeys for the same password,</span>
+<span class="c1">// use different IDs (optional). Default brainKeyId value is nil.</span>
+<span class="k">let</span> <span class="nv">keyPair</span> <span class="o">=</span> <span class="k">try!</span> <span class="n">brainKey</span><span class="o">.</span><span class="nf">generateKeyPair</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"Your password"</span><span class="p">,</span>
+                                            <span class="nv">brainKeyId</span><span class="p">:</span> <span class="s">"Optional BrainKey id"</span><span class="p">)</span><span class="o">.</span><span class="nf">startSync</span><span class="p">()</span><span class="o">.</span><span class="nf">getResult</span><span class="p">()</span>
+</code></pre>
+<h4 id='generate-brainkey-based-on-unique-url' class='heading'>Generate BrainKey based on unique URL</h4>
+
+<p>The typical BrainKey implementation uses a password or concatenated answers to security questions to regenerate the user’s private key. But a unique session link generated by the system admin can also do the trick.</p>
+
+<p>This typically makes the most sense for situations where it’s burdensome to require a password each time a user wants to send or receive messages, like single-session chats in a browser application.</p>
+
+<p>Here’s the general flow of how BrainKey can be used to regenerate a private key based on a unique URL:</p>
+
+<ul>
+<li>When the user is ready to begin an encrypted messaging session, the application sends the user an SMS message</li>
+<li>The SMS message contains a unique link like <a href="https://healthcare.app/?session=abcdef13803488">https://healthcare.app/?session=abcdef13803488</a></li>
+<li>The string &lsquo;abcdef13803488&rsquo; is used as a password for the private key regeneration</li>
+<li>By clicking on the link, the user immediately establishes a secure session using their existing private key regenerated with Brainkey and does not need to input an additional password</li>
+</ul>
+
+<p>Important notes for implementation:</p>
+
+<ul>
+<li>The link is one-time use only. When the user clicks on the link, the original link expires and cannot be used again, and so a new link has to be created for each new chat session.</li>
+<li>All URL links must be short-lived (recommended lifetime is 1 minute).</li>
+<li>The SMS messages should be sent over a different channel than the one the user will be using for the secure chat session.</li>
+<li>If you’d like to add additional protection to ensure that the person clicking the link is the intended chat participant, users can be required to submit their name or any other security question. This answer will need to be built in as part of the BrainKey password.</li>
+</ul>
+<pre class="highlight swift"><code><span class="o">...</span>
+    <span class="k">let</span> <span class="nv">keyPair</span> <span class="o">=</span> <span class="k">try!</span> <span class="n">brainKey</span><span class="o">.</span><span class="nf">generateKeyPair</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"abcdef13803488"</span><span class="p">,</span>
+                                                <span class="nv">brainKeyId</span><span class="p">:</span> <span class="s">"Optional User SSN"</span><span class="p">)</span><span class="o">.</span><span class="nf">startSync</span><span class="p">()</span><span class="o">.</span><span class="nf">getResult</span><span class="p">()</span>
+<span class="o">...</span>
+</code></pre>
+
+<blockquote>
+<p>Note! if you don&rsquo;t need to use additional parameters, like <q>Optional User SSN</q>, you can just omit it: <code>let keyPair = try! brainKey.generateKeyPair(password: &quot;abcdef13803488&quot;).startSync().getResult()</code></p>
+</blockquote>
+<h2 id='docs' class='heading'>Docs</h2>
+
+<p>Virgil Security has a powerful set of APIs, and the documentation below can get you started today.</p>
+
+<ul>
+<li><a href="https://developer.virgilsecurity.com/docs/use-cases/v1/brainkey">Brain Key</a> Use Case</li>
+<li><a href="https://eprint.iacr.org/2015/644.pdf">The Pythia PRF Service</a> - foundation principles of the protocol</li>
+<li><a href="https://developer.virgilsecurity.com/">Virgil Security Documentation</a></li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This library is released under the <a href="LICENSE">3-clause BSD License</a>.</p>
+<h2 id='support' class='heading'>Support</h2>
+
+<p>Our developer support team is here to help you. Find out more information on our <a href="https://help.virgilsecurity.com/">Help Center</a>.</p>
+
+<p>You can find us on <a href="https://twitter.com/VirgilSecurity">Twitter</a> or send us email <a href="mailto:support@VirgilSecurity.com">support@VirgilSecurity.com</a>.</p>
+
+<p>Also, get extra help from our support team on <a href="https://virgilsecurity.com/join-community">Slack</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://virgilsecurity.com/" target="_blank" rel="external">Virgil Security</a>. All rights reserved. (Last updated: 2019-08-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
